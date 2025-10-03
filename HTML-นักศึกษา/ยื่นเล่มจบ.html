@@ -21,7 +21,7 @@
       <aside class="sidebar">
         <ul>
           <li><a href="เสนอหัวข้อ.html">เสนอหัวข้อ</a></li>
-          <li><a href="ยื่นสอบหัวข้อ.html">การยืนยันหัวข้อ</a></li>
+          <li><a href="ยื่นสอบหัวข้อ.html">ยื่นสอบหัวข้อ</a></li>
           <li><a href="สถานะผลสอบ.html">สถานะผลการสอบหัวข้อ</a></li>
           <li><a href="ความก้าวหน้า.html">ความก้าวหน้าของโครงงาน</a></li>
           <li><a href="ยื่นเล่มจบ.html">ยื่นเล่มจบโครงงาน</a></li>
@@ -33,10 +33,11 @@
         <div class="form-box">
           <h3>หัวข้อโครงงาน</h3>
           <form>
-            <input type="text" placeholder="วว/ดด/ปป">
-            <input type="text" placeholder="เวลา">
-            <input type="text" placeholder="เลือกกรรมการ 3 ท่าน">
-            <a href="นศ-ยื่นสอบหัวข้อ02.html" class="submit-btn">ยื่นเสนอหัวข้อ</a>
+            <label for="project_file">อัปโหลดเล่มโครงงาน(PDF)</label>
+            <input type="file" id="project_file" accept=".pdf">
+            <label for="presentation_file">อัปโหลดสไลด์นำเสนอ(PDF)</label>
+            <input type="file" id="presentation_file" accept=".pdf">
+            <button type="submit">ยืนยันการยื่นสอบ</button>
           </form>
         </div>
       </section>
