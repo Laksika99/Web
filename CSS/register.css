@@ -103,3 +103,178 @@ header .menu a.active {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.kanit-regular {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* Reset margin/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register input[type="text"]
+{
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6600;
+    color: white;
+}
+
+/* Background */
+body {
+  background-color: #f8f6f2;
+}
+
+
+.logo {
+  color: red;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 20px;
+  border: 2px solid #444;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.register {
+  border-color: #ff6600;
+}
+
+.login {
+  border-color: #0066ff;
+}
+
+/* Main Section */
+.main {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Overlay text */
+.overlay-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
+    text-align: left;
+  line-height: 1.5em;
+  background-color: rgba(255, 165, 0, 0.6);
+  padding: 20px 40px;
+  border-radius: 10px;
+
+z-index: 2;
+}
+
+.overlay-text span {
+  display: inline-block;
+}
+
+body {
+    margin: 0; /* ลบ margin เริ่มต้นของ browser */
+    min-height: 100vh; /* ให้ body สูงเต็มหน้าจอ */
+    display: flex;
+
+    flex-direction: column;
+
+    /* ตั้งค่าภาพพื้นหลัง */
+    background-image: url('../IMG/พื้นหลัง.png'); /* ใส่ชื่อไฟล์ภาพของคุณ */
+    background-size: cover;    /* ขยายภาพให้เต็มพื้นที่ body */
+    background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
+    background-position: center;  /* จัดภาพให้อยู่กลาง */
+}
+
+
+
+.welcome-text {
+    padding: 30px 50px;
+    border-radius: 15px; 
+    text-align: center;
+    max-width: 500px; /* กำหนดความกว้างสูงสุด */
+   margin: 100px auto; /* จัดกึ่งกลางแนวนอน */
+   font-family: Arial, sans-serif;
+}
+
+.welcome-text h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: black;
+
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between; /* ดัน h1 ไปซ้าย ปุ่มไปขวา */
+    align-items: center;
+    background-color: rgb(255, 166, 0); /* สีพื้นหลังโปร่งแสง */
+    height: 70px;
+}
+header h1 {
+    color: #e90f0f;
+    margin-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between; /* ดัน h1 ไปซ้าย ปุ่มไปขวา */
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.footer {
+    height: 15px;
+    width: 100%;
+    background-color: rgb(255, 166, 0); /* สีพื้นหลังโปร่งแสง */
+    text-align: center;
+    line-height: 15px; /* จัดกึ่งกลางแนวตั้ง */
+    position: absolute;
+    bottom: 0;
+}
+
+.welcome-box {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: black;
+    font-size: 22px;
+    font-family: 'Arial', sans-serif;
+}
+
+.button-container {
+    display: flex;           /* เปิด flex layout */
+    justify-content: flex-end; /* จัดชิดขวา */
+    padding: 20px;           /* เว้นระยะรอบ ๆ */
+}
+
+button {
+    padding: 10px 20px;      /* ขนาดปุ่ม */
+    font-size: 16px;         /* ขนาดตัวอักษร */
+    cursor: pointer;         /* เปลี่ยน cursor เป็น pointer */
+}
