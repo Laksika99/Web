@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.kanit-regular {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  
+  background: url("../IMG/พื้นหลัง.png") no-repeat center center fixed;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: orange;
+}
+
+header .logo {
+  color: red;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+header .menu a {
+  margin-left: 10px;
+  text-decoration: none;
+  padding: 5px 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  color: black;
+}
+
+header .menu a.active {
+  background-color: white;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+}
+
+.form-box {
+  background-color: orange;
+  padding: 30px 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px #aaa;
+  width: 300px;
+}
+
+.form-box .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.form-box h2 {
+  margin-bottom: 20px;
+}
+
+.form-box input[type="text"],
+.form-box input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box .eye {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  cursor: pointer;
+}
+
+.user-type {
+  text-align: left;
+  margin: 10px 0;
+}
+
+.user-type label {
+  display: block;
+  margin: 5px 0;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: maroon;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

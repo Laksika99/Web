@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.kanit-regular {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* =======================
+   ตั้งค่าพื้นฐานและพื้นหลัง
+========================== */
+body {
+  margin: 0;
+  font-family: 'Sarabun', sans-serif;
+  background: url("../IMG/พื้นหลัง.png") no-repeat center center fixed; /* รูปพื้นหลัง */
+  background-size: cover; /* ปรับให้รูปเต็มจอ */
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8); /* กล่องพื้นหลังโปร่งแสง */
+  min-height: 100vh; /* ความสูงเต็มหน้าจอ */
+}
+
+
+/* =======================
+   Header ด้านบน
+========================== */
+header {
+  display: flex; /* จัดแนวนอน */
+  justify-content: space-between; /* จัดซ้าย-ขวา */
+  align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
+  background-color: #f6a623; /* สีส้ม */
+  padding: 20px 20px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2d2d2d; /* สีตัวอักษรโลโก้ */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* ช่องว่างระหว่างปุ่มเมนู */
+}
+
+.tab {
+  background-color: #ffeaa7; /* สีพื้น tab */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #dfe6e9; /* สี tab เมื่อถูกเลือก */
+}
+
+.user-icon {
+  font-size: 24px; /* ขนาดไอคอนผู้ใช้ */
+}
+
+
+/* =======================
+   Layout ตัวหลักของเพจ
+========================== */
+main {
+  display: flex; /* แบ่งเป็น sidebar และ content */
+}
+
+
+/* =======================
+   Sidebar เมนูซ้าย
+========================== */
+.sidebar {
+  width: 220px;
+  background-color: #eeeeee; /* สีพื้น sidebar */
+  padding: 10px;
+}
+
+.sidebar ul {
+  list-style: none; /* เอาจุดหน้ารายการออก */
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  background-color: #f4f4f4;
+  border-left: 5px solid transparent; /* เส้นสีด้านซ้าย */
+  cursor: pointer;
+}
+
+.sidebar li.active,
+.sidebar li:hover {
+  background-color: #f6a623; /* สีพื้นเมื่อ active หรือ hover */
+  border-left: 5px solid #d35400; /* เส้นด้านซ้ายสีส้มเข้ม */
+  color: white;
+}
+
+
+/* =======================
+   พื้นที่ Content กลาง
+========================== */
+.content {
+  flex-grow: 1; /* ขยายเต็มพื้นที่ที่เหลือ */
+  padding: 30px;
+}
+
+
+/* =======================
+   กล่องฟอร์ม (เช่น ล็อกอิน, กรอกข้อมูล)
+========================== */
+.form-box {
+  background-color: white;
+  padding: 25px;
+  border-radius: 20px; /* มุมโค้งมน */
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1); /* เงา */
+  max-width: 400px;
+  margin: auto; /* จัดให้อยู่กลางแนวนอน */
+}
+
+.form-box h3 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-box button {
+  background-color: #f6a623; /* สีปุ่ม */
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-box button:hover {
+  background-color: #e67e22; /* เปลี่ยนสีเมื่อ hover */
+}
+
+
+/* =======================
+   การ์ดแสดงสถานะผลการสอบ
+========================== */
+.status-page {
+  display: flex; /* จัดเรียงแนวนอน */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.status-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.15); /* เงา */
+  text-align: center;
+  padding: 25px;
+  width: 200px;
+  transition: transform 0.2s ease; /* ทำ animation เมื่อ hover */
+}
+
+.status-card:hover {
+  transform: translateY(-5px); /* ยกขึ้นเล็กน้อย */
+}
+
+.status-card .icon {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+/* สีของไอคอนตามผลสอบ */
+.status-card.pass .icon {
+  color: #2ecc71; /* สีเขียว: ผ่าน */
+}
+.status-card.fix .icon {
+  color: teal; /* สีเขียวอมฟ้า: ต้องแก้ไข */
+}
+.status-card.fail .icon {
+  color: #e74c3c; /* สีแดง: ไม่ผ่าน */
+}
+
+.status-card button {
+  background: #ffcc80;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.status-card p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* =======================
+   Footer ด้านล่าง
+========================== */
+footer {
+  background-color: #f6a623; /* สีพื้นของ footer */
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* =======================
+   เอาเส้นออก
+========================== */
+a {
+  text-decoration: none;
+  color: inherit; /* ใช้สีเดียวกับข้อความปกติ */
+}
+
+/* =======================
+   ปรับดอบดาวให้สวย
+========================== */
+
+select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}

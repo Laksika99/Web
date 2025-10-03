@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - KMUTNB</title>
+  <link rel="stylesheet" href="../CSS/register.css">
+</head>
+<body>
+  <header>
+    <div class="logo">KMUTNB</div>
+    <div class="menu">
+      <a href="register.html" class="btn active">Register</a>
+      <a href="login.html" class="btn">Login</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <div class="form-box">
+        <div class="icon">👤</div>
+        <h2>หน้าลงทะเบียน</h2>
+        <form action="register-success.html" method="post">
+          <input type="text" name="username" placeholder="สร้างแอคเคาท์" required>
+
+          <div class="password-box">
+            <input type="password" name="password" placeholder="สร้างรหัสผ่าน" required>
+            <span class="eye"></span>
+          </div>
+
+          <div class="password-box">
+            <input type="password" name="confirm-password" placeholder="ยืนยันรหัสผ่าน" required>
+            <span class="eye"></span>
+          </div>
+
+          <!-- เพิ่มตัวเลือกประเภทผู้ใช้งาน -->
+          <div class="user-type">
+            <label>
+              <input type="radio" name="user-type" value="student" required> นักศึกษา
+            </label>
+            <label>
+              <input type="radio" name="user-type" value="teacher" required> อาจารย์
+            </label>
+            <label>
+              <input type="radio" name="user-type" value="staff" required> เจ้าหน้าที่
+            </label>
+          </div>
+
+         <a href="นศ-เสนอหัวข้อ01.html" class="submit-btn">submit</a>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
