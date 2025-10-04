@@ -91,7 +91,7 @@ main {
 /* ส่วนเนื้อหากลาง */
 .content {
   flex: 1;
-  padding: 20px;
+  padding: 30px;
 }
 
 .content h2 {
@@ -195,3 +195,127 @@ main {
   cursor: pointer;
 }
 
+/* ===== โครงสร้างหลัก ===== */
+main {
+  display: flex;
+}
+
+/* ===== เมนูด้านซ้าย ===== */
+.sidebar {
+  width: 18%;
+  background-color: #f4a43a;
+  color: white;
+  height: calc(100vh - 50px);
+  padding-top: 15px;
+}
+
+/* ลิสต์เมนู */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+
+
+/* ===== ส่วนเนื้อหากลาง ===== */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.content h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* กล่องใหญ่ที่ครอบ 2 ฝั่ง */
+.exam-container {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #f5a623;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* ===== ฝั่งซ้าย (รายชื่อนักศึกษา) ===== */
+.student-list {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.student-list h3 {
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+/* ปุ่มรายชื่อนักศึกษา */
+.student-btn {
+  background-color: #f8e3c4;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+}
+
+.student-btn:hover {
+  background-color: #f5a623;
+  color: white;
+}
+
+/* ===== ฝั่งขวา (รายละเอียดการสอบ) ===== */
+.exam-detail {
+  width: 55%;
+  border: 2px solid #f5a623;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ลิสต์ข้อมูล */
+.exam-detail ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.exam-detail li {
+  margin: 8px 0;
+}
+
+/* ===== ส่วนกรรมการ ===== */
+.committee {
+  margin-top: 10px;
+}
+
+.committee ol {
+  margin: 0 0 10px 25px;
+}
+
+/* ===== ปุ่มรับทราบ ===== */
+.confirm-btn {
+  display: block;
+  margin: 15px auto 0 auto;
+  background-color: #f5a623;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.confirm-btn:hover {
+  background-color: #e6942f;
+}
