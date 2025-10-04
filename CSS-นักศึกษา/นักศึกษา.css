@@ -74,7 +74,7 @@ main {
    Sidebar เมนูซ้าย
 ========================== */
 .sidebar {
-  width: 220px;
+  width: 250px;
   background-color: #eeeeee; /* สีพื้น sidebar */
   padding: 10px;
 }
@@ -92,7 +92,7 @@ main {
   cursor: pointer;
 }
 
-.sidebar li.active,
+
 .sidebar li:hover {
   background-color: #f6a623; /* สีพื้นเมื่อ active หรือ hover */
   border-left: 5px solid #d35400; /* เส้นด้านซ้ายสีส้มเข้ม */
@@ -114,7 +114,7 @@ main {
 ========================== */
 .form-box {
   background-color: white;
-  padding: 25px;
+  padding: 20px;
   border-radius: 20px; /* มุมโค้งมน */
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1); /* เงา */
   max-width: 400px;
@@ -129,10 +129,11 @@ main {
 
 .form-box input {
   width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 8px;
+  margin: 8px 0;  
+  border: 1px solid #ccc;  
+  border-radius: 5px; /* มุมโค้งมน */
+  box-sizing: border-box; /* รวม padding และ border ในขนาด */
 }
 
 .form-box button {
@@ -239,4 +240,10 @@ select {
   border: 1px solid #ccc;
   background-color: white;
   cursor: pointer;
+}
+
+.content{
+  text-align: center;
+  height: auto;
+  width: auto;
 }
