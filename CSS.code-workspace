@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "CSS"
+		},
+		{
+			"path": "CSS-นักศึกษา"
+		},
+		{
+			"path": "CSS-อาจารย์"
+		},
+		{
+			"path": "HTML"
+		},
+		{
+			"path": "HTML-เจ้าหน้าที่"
+		},
+		{
+			"path": "HTML-นักศึกษา"
+		},
+		{
+			"path": "HTML-อาจารย์"
+		},
+		{
+			"path": "IMG"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "CSS"
+	}
+}

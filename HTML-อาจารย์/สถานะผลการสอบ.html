@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="/CSS-อาจารย์/อจ.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">PROJECT</div>
+      <nav>
+        <button class="tab active">นักศึกษา</button>
+        <button class="tab">อาจารย์</button>
+        <button class="tab">เจ้าหน้าที่</button>
+        <div class="user-icon">👤</div>
+      </nav>
+    </header>
+
+    <main>
+      <aside class="sidebar">
+         <ul>
+          <br>
+          <li><a href="เสนอหัวข้อ.html">เสนอหัวข้อ</a></li>
+          <br>
+          <li><a href="ยื่นสอบหัวข้อ.html">ยื่นสอบหัวข้อ</a></li>
+          <br>
+          <li><a href="สถานะผลสอบ.html">สถานะผลการสอบหัวข้อ</a></li>
+          <br>
+          <li><a href="ความก้าวหน้า.html">ความก้าวหน้าของโครงงาน</a></li>
+          <br>
+          <li><a href="ยื่นเล่มจบ.html">ยื่นเล่มจบโครงงาน</a></li>
+          <br>
+          <li><a href="สถานะผลสอบ.html">ผลการสอบ</a></li>
+        </ul>
+      </aside>
+       <!-- เนื้อหาหลัก -->
+  <main>
+    <section class="student-section">
+      <h3>รายชื่อนักศึกษา</h3>
+      <ul id="studentList">
+        <li>นายเกรา คม</li>
+        <li>น.ส.กุมภา พันธ์</li>
+        <li>น.ส.เมษ ยม</li>
+      </ul>
+    </section>
+
+    <section class="result-section">
+      <h3>ผลสอบ :</h3>
+      <div class="buttons">
+        <button id="passBtn" class="btn">ผ่าน</button>
+        <button id="failBtn" class="btn">ไม่ผ่าน</button>
+      </div>
+    </section>
+
+    <button class="submit-btn">เสร็จสิ้น</button>
+  </main>
+
+  <!-- สคริปต์เล็ก ๆ เพื่อเปลี่ยนสี -->
+  <script>
+    const passBtn = document.getElementById('passBtn');
+    const failBtn = document.getElementById('failBtn');
+
+    passBtn.addEventListener('click', () => {
+      passBtn.classList.add('green');
+      failBtn.classList.remove('red');
+    });
+
+    failBtn.addEventListener('click', () => {
+      failBtn.classList.add('red');
+      passBtn.classList.remove('green');
+    });
+    </script>
+  </div>
+</body>
+</html>
