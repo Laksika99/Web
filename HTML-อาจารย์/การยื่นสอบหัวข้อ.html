@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ตรวจสอบหัวข้อโครงงาน</title>
+  <link rel="stylesheet" href="/CSS-อาจารย์/อจ.css"> <!-- ลิงก์ไปยังไฟล์ CSS -->
+  <script>
+    // ฟังก์ชันนี้จะทำให้ปุ่ม "อนุมัติ" แสดงขึ้นเมื่อเลือกโครงงานกลุ่ม 2
+    function showButtons(group) {
+      const buttons = document.getElementById('approval-buttons');
+      if (group === 'group2' || group === 'group1') {
+        buttons.style.display = 'flex'; // แสดงปุ่ม
+      } else {
+        buttons.style.display = 'none'; // ซ่อนปุ่ม
+      }
+    }
+  </script>
+</head>
+<body>
+
+  
+    <div class="container">
+  <header>
+      <div class="logo">PROJECT</div>
+      <nav>
+        <button class="tab">นักศึกษา</button>
+        <button class="tab active">อาจารย์</button>
+        <button class="tab">เจ้าหน้าที่</button>
+        <div class="user-icon">👤</div>
+      </nav>
+    </header>
+
+  <main>
+    <!-- เมนูด้านซ้าย -->
+    <aside class="sidebar">
+      <ul>
+        <br>
+        <li class="active">เสนอหัวข้อ</li>
+        <br>
+        <li>การยื่นเสนอหัวข้อ</li>
+        <br>
+        <li>สถานะผลการเสนอหัวข้อ</li>
+        <br>
+        <li>ความก้าวหน้าโครงงาน</li>
+        <br>
+        <li>ยื่นสอบโครงงาน</li>
+        <br>
+        <li>ผลการสอบ</li>
+      </ul>
+    </aside>
+      
+    </section>
+  </main>
+
+</body>
+</html>
