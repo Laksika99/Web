@@ -1,0 +1,197 @@
+/* กำหนดพื้นฐานของหน้าเว็บ */
+body {
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  background-color: #fff;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8); /* กล่องพื้นหลังโปร่งแสง */
+  min-height: 100vh; /* ความสูงเต็มหน้าจอ */
+}
+
+
+/* ส่วนหัวด้านบน */
+header {
+  display: flex; /* จัดแนวนอน */
+  justify-content: space-between; /* จัดซ้าย-ขวา */
+  align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
+  background-color: #f6a623; /* สีส้ม */
+  padding: 20px 20px;
+}
+
+
+/* โลโก้ PROJECT */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2d2d2d; /* สีตัวอักษรโลโก้ */
+}
+
+
+/* เมนูด้านบน */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* ช่องว่างระหว่างปุ่มเมนู */
+}
+
+/* ปุ่มเมนูที่เลือกอยู่ */
+nav a.active-tab {
+  background-color: #fff;
+  color: #f5a623;
+}
+
+.tab {
+  background-color: #ffeaa7; /* สีพื้น tab */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ไอคอนผู้ใช้ */
+.user-icon {
+  font-size: 24px;
+}
+
+/* โครงสร้างหลัก */
+main {
+  display: flex;
+}
+
+/* เมนูด้านซ้าย */
+.sidebar {
+  width: 250px;
+  background-color: #eeeeee; /* สีพื้น sidebar */
+  padding: 10px;
+}
+
+.sidebar ul {
+  list-style: none; /* เอาจุดหน้ารายการออก */
+  padding: 0;
+}
+
+/* รายการในแถบด้านข้าง */
+.sidebar li {
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  background-color: #f4f4f4;
+  border-left: 5px solid transparent; /* เส้นสีด้านซ้าย */
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background-color: #f6a623; /* สีพื้นเมื่อ active หรือ hover */
+  border-left: 5px solid #d35400; /* เส้นด้านซ้ายสีส้มเข้ม */
+  color: white;
+}
+
+/* ส่วนเนื้อหากลาง */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.content h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* กล่องรวมส่วนโครงงาน */
+.project-section {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #f5a623;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* ปุ่มรายชื่อโครงงาน */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-btn {
+  background-color: #f8e3c4;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+}
+
+.project-btn:hover {
+  background-color: #f5a623;
+  color: white;
+}
+
+/* กล่องแสดงรายละเอียด */
+.project-detail {
+  border: 2px solid #f5a623;
+  border-radius: 10px;
+  padding: 15px;
+  width: 60%;
+}
+
+.project-detail h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+/* ปุ่มแสดงความคิดเห็น */
+.show-comment {
+  background-color: #f5a623;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto 0;
+}
+
+.show-comment:hover {
+  background-color: #e6942f;
+}
+
+/* ปุ่มอนุมัติ */
+.approval {
+  display: none; /* ซ่อนเริ่มต้น */
+  justify-content: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+/* ปุ่มแต่ละแบบ */
+.approve {
+  background-color: #f5a623;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.reject {
+  background-color: #555;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-approve {
+  background-color: #e89a1f;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
