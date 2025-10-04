@@ -15,14 +15,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
+  padding: 30px 50px;
   background-color: orange;
 }
 
 header .logo {
   color: red;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 60px;
 }
 
 header .menu a {
