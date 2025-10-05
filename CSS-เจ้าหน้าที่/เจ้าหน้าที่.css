@@ -381,3 +381,57 @@ button {
 button:hover {
   opacity: 0.85;
 }
+
+/* เนื้อหาหลัก */
+.content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  color: #1a1a5a;
+  margin-bottom: 15px;
+}
+
+/* กล่องรายชื่อนักศึกษา */
+.student-list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.student-list li {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid #f8a500;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 75%;
+  background-color: #fff;
+}
+
+/* ปุ่ม */
+button {
+  border: none;
+  padding: 8px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.status {
+  background-color: #f8a500;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.check {
+  background-color: #fcbf49;
+  color: #000;
+}
+
+button:hover {
+  opacity: 0.85;
+}
