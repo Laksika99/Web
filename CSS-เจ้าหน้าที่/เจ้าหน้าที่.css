@@ -1,0 +1,383 @@
+main {
+  display: flex;
+}
+
+/* เมนูด้านซ้าย */
+.sidebar {
+  background-color: #e6e6e6;
+  width: 230px;
+  height: calc(100vh - 60px);
+  padding-top: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.sidebar li.active {
+  background-color: #f39c12;
+  color: white;
+}
+
+/* ส่วนเนื้อหาด้านขวา */
+.content {
+  flex: 1;
+  padding: 30px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  border: 3px solid #f39c12;
+}
+
+/* หัวข้อ */
+.content h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* กล่องรายชื่อ */
+.student-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* แต่ละแถวรายชื่อนักศึกษา */
+.student-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fffaf2;
+  border-radius: 8px;
+  padding: 10px 15px;
+  border: 1px solid #ffd699;
+}
+
+/* ปุ่ม */
+.btn {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.btn.orange {
+  background-color: #f39c12;
+  color: white;
+}
+
+.btn.green {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn.gray {
+  background-color: #bdc3c7;
+  color: white;
+}
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.kanit-regular {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* =======================
+   ตั้งค่าพื้นฐานและพื้นหลัง
+========================== */
+body {
+  margin: 0;
+  font-family: 'Sarabun', sans-serif;
+  background: url("../IMG/พื้นหลัง.png") no-repeat center center fixed; /* รูปพื้นหลัง */
+  background-size: cover; /* ปรับให้รูปเต็มจอ */
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8); /* กล่องพื้นหลังโปร่งแสง */
+  min-height: 100vh; /* ความสูงเต็มหน้าจอ */
+}
+
+
+/* =======================
+   Header ด้านบน
+========================== */
+header {
+  display: flex; /* จัดแนวนอน */
+  justify-content: space-between; /* จัดซ้าย-ขวา */
+  align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
+  background-color: #f6a623; /* สีส้ม */
+  padding: 20px 20px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2d2d2d; /* สีตัวอักษรโลโก้ */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* ช่องว่างระหว่างปุ่มเมนู */
+}
+
+.tab {
+  background-color: #ffeaa7; /* สีพื้น tab */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #dfe6e9; /* สี tab เมื่อถูกเลือก */
+}
+
+.user-icon {
+  font-size: 24px; /* ขนาดไอคอนผู้ใช้ */
+}
+
+
+/* =======================
+   Layout ตัวหลักของเพจ
+========================== */
+main {
+  display: flex; /* แบ่งเป็น sidebar และ content */
+}
+
+
+/* =======================
+   Sidebar เมนูซ้าย
+========================== */
+.sidebar {
+  width: 250px;
+  background-color: #eeeeee; /* สีพื้น sidebar */
+  padding: 10px;
+}
+
+.sidebar ul {
+  list-style: none; /* เอาจุดหน้ารายการออก */
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  background-color: #f4f4f4;
+  border-left: 5px solid transparent; /* เส้นสีด้านซ้าย */
+  cursor: pointer;
+}
+
+
+.sidebar li:hover {
+  background-color: #f6a623; /* สีพื้นเมื่อ active หรือ hover */
+  border-left: 5px solid #d35400; /* เส้นด้านซ้ายสีส้มเข้ม */
+  color: white;
+}
+
+/* ส่วนโครงสร้างหลัก */
+main {
+  display: flex;
+}
+
+/* แถบเมนูด้านซ้าย */
+.sidebar {
+  background-color: #e6e6e6;
+  width: 230px;
+  height: calc(100vh - 60px);
+  padding-top: 20px;
+}
+
+/* เมนูในแถบซ้าย */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.sidebar li.active {
+  background-color: #f39c12;
+  color: white;
+}
+
+/* เนื้อหาหลัก */
+.content {
+  flex: 1;
+  padding: 30px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  border: 3px solid #f39c12;
+}
+
+/* หัวข้อ */
+.content h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* รายชื่อนักศึกษา */
+.student-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* แต่ละแถวรายชื่อ */
+.student-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fffaf2;
+  border-radius: 8px;
+  padding: 10px 15px;
+  border: 1px solid #ffd699;
+}
+
+/* ปุ่ม */
+.btn {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.btn.orange {
+  background-color: #f39c12;
+  color: white;
+}
+
+.btn.gray {
+  background-color: #bdc3c7;
+  color: white;
+}
+
+/* ส่วนเนื้อหาหลัก */
+.content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  color: #1a1a5a;
+  border-bottom: 2px solid #f8a500;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* รายชื่อนักศึกษา */
+.student-list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.student-list li {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid #f8a500;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 75%;
+  background-color: #fff;
+}
+
+/* ปุ่มต่าง ๆ */
+button {
+  border: none;
+  padding: 8px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.save {
+  background-color: #f8a500;
+  color: #fff;
+}
+
+.check {
+  background-color: #fcbf49;
+  color: #000;
+}
+
+.done {
+  background-color: #ffd37f;
+  color: #000;
+}
+
+/* เพิ่มเอฟเฟกต์ Hover */
+button:hover {
+  opacity: 0.85;
+}
+.content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  color: #1a1a5a;
+  margin-bottom: 15px;
+}
+
+/* กล่องรายชื่อนักศึกษา */
+.student-list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.student-list li {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid #f8a500;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 75%;
+  background-color: #fff;
+}
+
+/* ปุ่ม */
+button {
+  border: none;
+  padding: 8px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.status {
+  background-color: #f8a500;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.check {
+  background-color: #fcbf49;
+  color: #000;
+}
+
+button:hover {
+  opacity: 0.85;
+}

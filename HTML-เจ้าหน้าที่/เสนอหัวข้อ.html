@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="/CSS-เจ้าหน้าที่/เจ้าหน้าที่.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">PROJECT</div>
+      <nav>
+        <button class="tab">นักศึกษา</button>
+        <button class="tab">อาจารย์</button>
+        <button class="tab active">เจ้าหน้าที่</button>
+        <div class="user-icon">👤</div>
+      </nav>
+    </header>
+
+    <main>
+      <aside class="sidebar">
+        <ul>
+          <br>
+          <li><a href="เสนอหัวข้อ.html">เสนอหัวข้อ</a></li>
+          <br>
+          <li><a href="ยื่นสอบหัวข้อ.html">ยื่นสอบหัวข้อ</a></li>
+          <br>
+          <li><a href="สถานะผลสอบ.html">สถานะผลการสอบหัวข้อ</a></li>
+          <br>
+          <li><a href="ความก้าวหน้า.html">ความก้าวหน้าของโครงงาน</a></li>
+          <br>
+          <li><a href="ยื่นเล่มจบ.html">ยื่นเล่มจบโครงงาน</a></li>
+          <br>
+          <li><a href="สถานะผลสอบ.html">ผลการสอบ</a></li>
+        </ul>
+      </aside>
+
+    <!-- ส่วนเนื้อหาด้านขวา -->
+    <section class="content">
+      <h2>รายชื่อนักศึกษาที่ขอสอบโครงงาน</h2>
+      
+      <!-- กล่องรายชื่อ -->
+      <div class="student-list">
+        <div class="student-row">
+          <span>น.ส.สุธาสินี รอดมิน</span>
+          <button class="btn orange">ไฟล์โครงงาน</button>
+          <button class="btn green">ผ่าน</button>
+          <button class="btn gray">แก้ไข</button>
+        </div>
+
+        <div class="student-row">
+          <span>น.ส.ลักษิกา ผมพันธ์</span>
+          <button class="btn orange">ไฟล์โครงงาน</button>
+          <button class="btn green">ผ่าน</button>
+          <button class="btn gray">แก้ไข</button>
+        </div>
+
+        <div class="student-row">
+          <span>น.ส.ชวนชม ยม</span>
+          <button class="btn orange">ไฟล์โครงงาน</button>
+          <button class="btn green">ผ่าน</button>
+          <button class="btn gray">แก้ไข</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
