@@ -272,3 +272,54 @@ nav li {
   font-weight: bold;
   cursor: pointer;
 }
+
+.content {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Result Box */
+.result-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 3px solid #f7a600;
+  border-radius: 20px;
+  padding: 30px 60px;
+  width: 400px;
+  text-align: left;
+}
+
+.result-card h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #1f2d50;
+}
+
+.result-card ul {
+  margin-bottom: 20px;
+}
+
+.result-card li {
+  margin: 8px 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+}
+
+.finish-btn {
+  display: block;
+  margin: 0 auto;
+  background-color: #f7a600;
+  color: white;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.finish-btn:hover {
+  background-color: #e49400;
+}
