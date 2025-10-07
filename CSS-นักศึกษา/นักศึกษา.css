@@ -84,6 +84,7 @@ main {
   padding: 0;
 }
 
+
 .sidebar li {
   padding: 8px 10px;
   margin-bottom: 5px;
@@ -249,4 +250,25 @@ select {
 }
 
 
-  
+nav li {
+  list-style: none; /* เอาจุดหน้ารายการออก */
+  padding: 0;
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  background-color: #f4f4f4;
+  border-left: 5px solid transparent; /* เส้นสีด้านซ้าย */
+  cursor: pointer;
+}  
+
+.tab.active {
+  background-color: #dfe6e9; /* สี tab เมื่อถูกเลือก */
+}
+
+.tab {
+  background-color: #ffeaa7; /* สีพื้น tab */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}

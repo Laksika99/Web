@@ -2,74 +2,80 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>Student Dashboard</title>
-  <link rel="stylesheet" href="/CSS-อาจารย์/อจ.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ตรวจสอบหัวข้อโครงงาน</title>
+  <link rel="stylesheet" href="/CSS-อาจารย์/อจ.css"> <!-- ลิงก์ไปยังไฟล์ CSS -->
+  <script>
+    // ฟังก์ชันนี้จะทำให้ปุ่ม "อนุมัติ" แสดงขึ้นเมื่อเลือกโครงงานกลุ่ม 2
+    function showButtons(group) {
+      const buttons = document.getElementById('approval-buttons');
+      if (group === 'group2' || group === 'group1') {
+        buttons.style.display = 'flex'; // แสดงปุ่ม
+      } else {
+        buttons.style.display = 'none'; // ซ่อนปุ่ม
+      }
+    }
+  </script>
 </head>
 <body>
-  <div class="container">
-    <header>
+
+  
+    <div class="container">
+  <header>
       <div class="logo">PROJECT</div>
       <nav>
-        <button class="tab active">นักศึกษา</button>
-        <button class="tab">อาจารย์</button>
-        <button class="tab">เจ้าหน้าที่</button>
+        <li class="tab"><a href="/HTML-นักศึกษา/เสนอหัวข้อ.html">นักศึกษา</a></li>
+        <li class="tab active"><a href="/HTML-อาจารย์/เสนอหัวข้อ.html">อาจารย์</a></li>
+        <li class="tab"><a href="/HTML-เจ้าหน้าที่/เสนอหัวข้อ.html">เจ้าหน้าที่</a></li>
         <div class="user-icon">👤</div>
       </nav>
     </header>
-
-    <main>
-      <aside class="sidebar">
-      <ul>
-       <li><a href="เสนอหัวข้อ.html">เสนอหัวข้อ</a></li>
+  <main>
+    <!-- เมนูด้านซ้าย -->
+    <aside class="sidebar">
+      
+       <ul>
+          <li><a href="/HTML-อาจารย์/เสนอหัวข้อ.html">เสนอหัวข้อ</a></li>
           <br>
-          <li><a href="ยื่นสอบหัวข้อ.html">ยื่นสอบหัวข้อ</a></li>
+          <li><a href="/HTML-อาจารย์/การยื่นสอบหัวข้อ.html">ยื่นสอบหัวข้อ</a></li>
           <br>
-          <li><a href="สถานะผลสอบ.html">สถานะผลการสอบหัวข้อ</a></li>
+          <li><a href="/HTML-อาจารย์/สถานะผลการสอบ.html">สถานะผลการสอบหัวข้อ</a></li>
           <br>
-          <li><a href="ความก้าวหน้า.html">ความก้าวหน้าของโครงงาน</a></li>
+          <li><a href="/HTML-อาจารย์/ความก้าวหน้า.html">ความก้าวหน้าของโครงงาน</a></li>
           <br>
-          <li><a href="ยื่นเล่มจบ.html">ยื่นเล่มจบโครงงาน</a></li>
+          <li><a href="/HTML-อาจารย์/ยื่นสอบจบโครงงาน.html">ยื่นเล่มจบโครงงาน</a></li>
           <br>
-          <li><a href="สถานะผลสอบ.html">ผลการสอบ</a></li>
+          <li><a href="/HTML-อาจารย์/ผลการสอบ.html">ผลการสอบ</a></li>
       </ul>
     </aside>
-       <!-- เนื้อหาหลัก -->
-  <main>
-    <section class="student-section">
+
+    <!-- เนื้อหาหลัก -->
+    <section class="content">
+    
+
+
+<div class="student-list">
       <h3>รายชื่อนักศึกษา</h3>
-      <ul id="studentList">
-        <li>นายเกรา คม</li>
-        <li>น.ส.กุมภา พันธ์</li>
-        <li>น.ส.เมษ ยม</li>
+      <ul>
+        <li>นายเอกภพ คม</li>
+        <li>นางสาวภูมิมา พันธ์</li>
+        <li>นางสาวนานะ ยม</li>
       </ul>
-    </section>
+    </div>
 
-    <section class="result-section">
-      <h3>ผลสอบ :</h3>
-      <div class="buttons">
-        <button id="passBtn" class="btn">ผ่าน</button>
-        <button id="failBtn" class="btn">ไม่ผ่าน</button>
+    <!-- กล่องผลสอบ -->
+    <div class="result-box">
+      <p><strong>ผลสอบ:</strong></p>
+      <div class="btn-group">
+        <button class="pass">ผ่าน</button>
+        <button class="fail">ไม่ผ่าน</button>
       </div>
-    </section>
+      <button class="finish-btn">เสร็จสิ้น</button>
+    </div>
 
-    <button class="submit-btn">เสร็จสิ้น</button>
+    </section>
   </main>
 
-  <!-- สคริปต์เล็ก ๆ เพื่อเปลี่ยนสี -->
-  <script>
-    const passBtn = document.getElementById('passBtn');
-    const failBtn = document.getElementById('failBtn');
-
-    passBtn.addEventListener('click', () => {
-      passBtn.classList.add('green');
-      failBtn.classList.remove('red');
-    });
-
-    failBtn.addEventListener('click', () => {
-      failBtn.classList.add('red');
-      passBtn.classList.remove('green');
-    });
-    </script>
-  </div>
 </body>
 </html>
+
