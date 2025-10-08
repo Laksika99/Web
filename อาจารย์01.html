@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ความก้าวหน้า</title>
-    <link rel="stylesheet" href="/CSS-อาจารย์/อจ.css"> <!-- ลิงก์ไปยังไฟล์ CSS -->
-</head>
-<body>
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เสนอหัวข้อ</title>
+  <link rel="stylesheet" href="/CSS-อาจารย์/อจ.css"> <!-- ลิงก์ไปยังไฟล์ CSS -->
+  <script>
+    // ฟังก์ชันนี้จะทำให้ปุ่ม "อนุมัติ" แสดงขึ้นเมื่อเลือกโครงงานกลุ่ม 2
+    function showButtons(group) {
+      const buttons = document.getElementById('approval-buttons');
+      if (group === 'group2' || group === 'group1') {
+        buttons.style.display = 'flex'; // แสดงปุ่ม
+      } else {
+        buttons.style.display = 'none'; // ซ่อนปุ่ม
+      }
+    }
+  </script>
 </head>
 <body>
 
   
     <div class="container">
- <header>
+   <header>
       <div class="logo">PROJECT</div>
       <nav>
         <li class="tab"><a href="/HTML-นักศึกษา/เสนอหัวข้อ.html">นักศึกษา</a></li>
@@ -24,22 +32,21 @@
     </header>
   <main>
     <!-- เมนูด้านซ้าย -->
-       <aside class="sidebar">
+    <aside class="sidebar">
       <ul>
-          <li><a href="/HTML-อาจารย์/เสนอหัวข้อ.html">เสนอหัวข้อ</a></li>
+          <li><a href="อาจารย์01.html">เสนอหัวข้อ</a></li>
           <br>
-          <li><a href="/HTML-อาจารย์/การยื่นสอบหัวข้อ.html">ยื่นสอบหัวข้อ</a></li>
+          <li><a href="อาจารย์02.html">ยื่นสอบหัวข้อ</a></li>
           <br>
-          <li><a href="/HTML-อาจารย์/สถานะผลการสอบ.html">สถานะผลการสอบหัวข้อ</a></li>
+          <li><a href="อาจารย์03.html">สถานะผลการสอบหัวข้อ</a></li>
           <br>
-          <li><a href="/HTML-อาจารย์/ความก้าวหน้า.html">ความก้าวหน้าของโครงงาน</a></li>
+          <li><a href="อาจารย์04.html">ความก้าวหน้าของโครงงาน</a></li>
           <br>
-          <li><a href="/HTML-อาจารย์/ยื่นสอบจบโครงงาน.html">ยื่นเล่มจบโครงงาน</a></li>
+          <li><a href="อาจารย์05.html">ยื่นเล่มจบโครงงาน</a></li>
           <br>
-          <li><a href="/HTML-อาจารย์/ผลการสอบ.html">ผลการสอบ</a></li>
+          <li><a href="อาจารย์06.html">ผลการสอบ</a></li>
       </ul>
     </aside>
-
 
     <!-- เนื้อหาหลัก -->
     <section class="content">
@@ -60,18 +67,18 @@
             <li>วัตถุประสงค์ <input type="text" placeholder="วัตถุประสงค์"></li>
             <li>บทคัดย่อ <input type="text" placeholder="บทคัดย่อ"></li>
             <li>อาจารย์ที่ปรึกษา <input type="text" placeholder="อาจารย์ที่ปรึกษา"></li>
-            <li>โครงงานพิเศษ/สหกิจ <input type="text" placeholder="โครงงานพิเศษ/สหกิจ"></li>
+            <li>โครงงานเพิ่มเติม<input type="text" placeholder="โครงงานเพิ่มเติม/ลิงก์"></li>
           </ul>
           <button class="show-comment">แสดงความคิดเห็น</button>
         </div>
       </div>
-          <br>
+        <br>
       <!-- ปุ่มอนุมัติ (ซ่อนเริ่มต้น) -->
       <div class="approval" id="approval-buttons">
         <button class="approve">อนุมัติ</button>
         <button class="reject">ไม่อนุมัติ</button>
         <button class="edit-approve">อนุมัติ (แก้ไข)</button>
-        <button class="approve">วิเคราะห์โครงงานนักศึกษา</button>
+
       </div>
     </section>
   </main>
