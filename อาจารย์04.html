@@ -47,7 +47,7 @@
     <section class="content">
       <h2>ตรวจสอบหัวข้อโครงงาน</h2>
 
-      <div class="project-section">
+  <div class="project-section">
         <!-- รายการโครงงาน -->
         <div class="project-list">
           <button class="project-btn" onclick="showButtons('group1')">• โครงงานนักศึกษา กลุ่ม1</button>
@@ -75,6 +75,70 @@
         <button class="edit-approve">อนุมัติ (แก้ไข)</button>
         <button class="approve">วิเคราะห์โครงงานนักศึกษา</button>
       </div>
+      <!-- Modal สำหรับป้อนเปอร์เซ็นต์การพัฒนาโครงงาน -->
+      <div id="analysis-modal" class="analysis-modal" aria-hidden="true">
+        <div class="analysis-modal__box">
+          <h3>วิเคราะห์โครงงานนักศึกษา</h3>
+          <p id="modal-group-label">กลุ่ม: <strong id="current-group">-</strong></p>
+          <label for="progress-input">เปอร์เซ็นต์ความก้าวหน้า</label>
+          <input id="progress-input" class="analysis-modal__input" type="number" min="0" max="100" />
+          <div class="analysis-modal__actions">
+            <button id="save-progress" class="btn save">บันทึก</button>
+            <button id="close-modal" class="btn close">ปิด</button>
+          </div>
+        </div>
+      </div>
+      <script>
+        // เลือกกลุ่มและเปิด modal เพื่อใส่เปอร์เซ็นต์
+        function showButtons(group){
+          // แค่แสดงรายละเอียด; เก็บชื่อกลุ่มไว้ใช้
+          document.getElementById('current-group').textContent = group;
+        }
+
+        // เมื่อกดปุ่ม 'วิเคราะห์โครงงานนักศึกษา' ให้เปิด modal สำหรับกลุ่มที่เลือกล่าสุด
+        (function(){
+          let lastGroup = 'group1';
+          // track when group buttons clicked
+          document.querySelectorAll('.project-btn').forEach(btn => btn.addEventListener('click', function(e){
+            // อ่านชื่อกลุ่มจาก onclick argument (we set it manually in the markup)
+            // Fallback: keep lastGroup
+          }));
+
+          const analyzeBtn = Array.from(document.querySelectorAll('.approve')).find(b => b.textContent.includes('วิเคราะห์'));
+          const modal = document.getElementById('analysis-modal');
+          const currentGroupEl = document.getElementById('current-group');
+          const input = document.getElementById('progress-input');
+
+          // when project buttons clicked, update lastGroup
+          window.showButtons = function(g){ lastGroup = g; currentGroupEl.textContent = g; };
+
+          analyzeBtn && analyzeBtn.addEventListener('click', function(){
+            // load saved value if exists
+            const saved = localStorage.getItem('progress_' + lastGroup);
+            input.value = saved !== null ? saved : '';
+            modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+          });
+
+          document.getElementById('close-modal').addEventListener('click', function(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); });
+
+          document.getElementById('save-progress').addEventListener('click', function(){
+            let v = parseInt(input.value,10);
+            if(isNaN(v) || v < 0) v = 0;
+            if(v > 100) v = 100;
+            localStorage.setItem('progress_' + lastGroup, String(v));
+            // store a simple color hint for student view
+            let colorClass = 'circle-red';
+            if(v >= 100) colorClass = 'circle-green';
+            else if(v >= 75) colorClass = 'circle-green';
+            else if(v >= 50) colorClass = 'circle-yellow';
+            else if(v >= 25) colorClass = 'circle-orange';
+            else colorClass = 'circle-red';
+            localStorage.setItem('progress_color_' + lastGroup, colorClass);
+            alert('บันทึกเปอร์เซ็นต์ '+ v +'% สำเร็จสำหรับ ' + lastGroup);
+            modal.classList.remove('open'); modal.setAttribute('aria-hidden','true');
+          });
+        })();
+      </script>
     </section>
   </main>
 

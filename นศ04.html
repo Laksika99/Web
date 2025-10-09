@@ -42,10 +42,55 @@
           <form>
             <input type="file" id="file" name="file">
             <input type="text" placeholder="วว/ดด/ปป">
-            <img src="/IMG/100 เปอร์เซ็น.png" style="width:100px;height:100px;">
+            <div id="progress-display">
+              <div class="progress-bar" aria-hidden="true">
+                <div class="progress-bar__track">
+                  <div id="progress-fill" class="progress-bar__fill" style="width:0%"></div>
+                </div>
+                <div id="progress-text" class="progress-bar__label">--%</div>
+              </div>
+            </div>
             <button type="submit">ยื่นสอบ</button>
           </form>
         </div>
+        <script>
+          (function(){
+            const groups = ['group1','group2'];
+            let found = null;
+            for(const g of groups){
+              const v = localStorage.getItem('progress_'+g);
+              if(v !== null){ found = {group: g, value: Math.max(0, Math.min(100, parseInt(v,10)))}; break; }
+            }
+            const text = document.getElementById('progress-text');
+            const fill = document.getElementById('progress-fill');
+            function applyProgress(obj){
+              if(!obj){ text.textContent = 'ยังไม่มีข้อมูล'; fill.style.width = '0%'; fill.className = 'progress-bar__fill'; return; }
+              text.textContent = obj.value + '%';
+              fill.style.width = obj.value + '%';
+              // read color hint
+              const colorClass = localStorage.getItem('progress_color_' + obj.group) || '';
+              // reset classes then add if present
+              fill.className = 'progress-bar__fill';
+              if(colorClass === 'circle-green') fill.classList.add('pb-green');
+              else if(colorClass === 'circle-yellow') fill.classList.add('pb-yellow');
+              else if(colorClass === 'circle-orange') fill.classList.add('pb-orange');
+              else if(colorClass === 'circle-red') fill.classList.add('pb-red');
+            }
+            applyProgress(found);
+            window.addEventListener('storage', function(e){
+              if(!e.key) return;
+              if(e.key.startsWith('progress_') || e.key.startsWith('progress_color_')){
+                // recompute found
+                let newFound = null;
+                for(const g of groups){
+                  const v = localStorage.getItem('progress_'+g);
+                  if(v !== null){ newFound = {group: g, value: Math.max(0, Math.min(100, parseInt(v,10)))}; break; }
+                }
+                applyProgress(newFound);
+              }
+            });
+          })();
+        </script>
       </section>
     </main>
   </div>

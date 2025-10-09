@@ -329,6 +329,58 @@ button {
 button:hover {
   opacity: 0.85;
 }
+.project-btn {
+  background: transparent;
+  border: 1px dashed rgba(0,0,0,0.08);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #1f2d50;
+}
+.project-btn:hover { background: #fff7ea; }
+
+/* Modal วิเคราะห์ */
+.analysis-modal {
+  display: none; /* เปิดด้วย JS */
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.analysis-modal.open { display: flex; }
+.analysis-modal__box {
+  width: 360px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 8px 30px rgba(31,45,80,0.12);
+  color: #1f2d50;
+}
+.analysis-modal__box h3 { margin: 0 0 8px 0; }
+.analysis-modal__box label { display:block; margin-top:10px; font-weight:600; }
+.analysis-modal__input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+}
+.analysis-modal__actions { display:flex; gap:8px; justify-content:flex-end; margin-top:12px; }
+.analysis-modal__actions .btn { padding:8px 14px; border-radius:8px; }
+.analysis-modal__actions .btn.save { background:#27ae60; color:#fff; }
+.analysis-modal__actions .btn.close { background:#bdc3c7; color:#fff; }
+
+.approve { background-color: #f39c12; color: white; padding: 8px 12px; border-radius:8px; }
+.approve:hover { filter:brightness(0.95); }
+
+/* small UI helpers */
+.analysis-modal__box{ max-width:100%; width:360px; }
+@media (max-width:480px){
+  .analysis-modal__box{ width:92%; padding:14px; }
+}
 .content {
   margin-left: 250px;
   padding: 20px;
