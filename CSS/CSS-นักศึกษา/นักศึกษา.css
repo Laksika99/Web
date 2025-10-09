@@ -133,7 +133,7 @@ main {
   margin: auto; /* จัดให้อยู่กลางแนวนอน */
   display: flex;
   flex-direction: column;
-  max-width: 250px;
+  max-width: 700px; /* ขยายความกว้างให้ฟิลด์เรียงเป็นแนวนอนได้ */
   flex: 1; /* ให้กล่องฟอร์มขยายเต็มที่ */
   gap: 10px; /* ช่องว่างระหว่างแถวฟอร์ม */
 }
@@ -163,6 +163,72 @@ main {
   border: 1px solid #ccc;  
   border-radius: 5px; /* มุมโค้งมน */
   box-sizing: border-box; /* รวม padding และ border ในขนาด */
+}
+
+/* =======================
+   Field แนวนอน (label + control อยู่บนแถวเดียว)
+   ใช้คลาส .field รอบ label + input/select/textarea
+   ตัวอย่าง HTML:
+   <div class="field">
+     <label>ชื่อ</label>
+     <input type="text" />
+   </div>
+=========================== */
+.field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start; /* ชิดซ้าย */
+  gap: 12px; /* ช่องว่างระหว่าง label กับ control */
+  width: 100%;
+  flex-wrap: wrap; /* ห่อเมื่อหน้าจอเล็ก */
+}
+
+.field label {
+  min-width: 140px; /* ความกว้างคงที่สำหรับ label เพื่อให้เรียงเป็นตาราง */
+  text-align: left; /* ตัวหนังสือชิดซ้ายใน label */
+  font-weight: 600;
+  color: #333;
+}
+
+.field input,
+.field select,
+.field textarea {
+  flex: 1 1 auto; /* ขยายเต็มที่ แต่ห่อเมื่อจำเป็น */
+  min-width: 160px; /* ความกว้างขั้นต่ำสำหรับ control */
+  margin: 0; /* เอามุมบน-ล่างที่มาจาก .form-box input */
+}
+
+.field .small {
+  flex: 0 0 120px; /* ใช้สำหรับฟิลด์ขนาดเล็ก เช่น วันที่ หรือ รหัส */
+}
+
+/* container สำหรับจัดกลุ่ม field หลายๆ ตัวให้อยู่แถวเดียวกัน */
+.fields-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap; /* ห่อเมื่อหน้าจอเล็ก */
+}
+
+/* ไฟล์กลุ่ม radio/checkbox ให้วางเป็นแนวนอนเมื่อใช้ .horizontal */
+.radio-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.radio-group.horizontal {
+  flex-direction: row;
+}
+.radio-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  background: transparent;
 }
 
 .form-box button {
