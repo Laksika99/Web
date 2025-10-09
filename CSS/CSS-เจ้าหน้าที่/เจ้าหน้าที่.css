@@ -462,3 +462,27 @@ nav li {
   font-weight: bold;
   cursor: pointer;
 }
+
+.form-box button {
+  background-color: #f6a623; /* สีปุ่ม */
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* =======================
+   พื้นที่ Content กลาง
+========================== */
+
+.content {
+  flex: 1;
+  padding: 30px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  border: 3px solid #f39c12;
+}
