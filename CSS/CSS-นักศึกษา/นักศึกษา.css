@@ -70,6 +70,7 @@ main {
 }
 
 
+
 /* =======================
    Sidebar เมนูซ้าย
 ========================== */
@@ -147,7 +148,6 @@ main {
   display: flex;
   flex-direction: column;
   width: 250px;
-  flex: 1; /* ให้กล่องฟอร์มขยายเต็มที่ */
   gap: 10px; /* ช่องว่างระหว่างแถวฟอร์ม */}
 
 .form-box h3 {
@@ -351,4 +351,3 @@ nav li {
 .finish-btn:hover {
   background-color: #e49400;
 }
-
